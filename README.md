@@ -12,36 +12,35 @@ This ember addon allows consumption of the [lodash](https://lodash.com/) library
 # Adapted from Mike North's version, but upgraded to ES4.0
 ## Use
 
-First you install this addon
+After installing, testing this code,
+you can publish the code to NPM.
 
-```sh
-# ember-cli > 0.2.3
-ember install ember-lodash
-# ember-cli <= 0.2.3
-ember install:addon ember-lodash
-```
+Then in your target code you would:
+```ember install ember-jm-lodash```
 
 And then in your ember.js app, you can import individual lodash modules freely
 
-```js
-import _string from 'lodash/string';
+    //YourFile.js
+    import _string from 'lodash/string';
 
-let truncatedString = _string.trunc(rawString);
-```
+    let truncatedString = _string.trunc(rawString);
+
 
 Additionally, if you wish to work with the entire lodash library on a single namespace, you have the option of importing that as well
 
-```js
-import _ from 'lodash/lodash';
+    //YourFile.js
+    import _ from 'lodash/lodash';
 
-let truncatedString = _.trunc(rawString);
-```
+    let truncatedString = _.trunc(rawString);
+
 
 ## Installation
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
+* `ember install ember-polyfill-for-tests`   # Installs polyfills that allow the test to work in PHANTOMJS 
+
 
 ## Running
 
